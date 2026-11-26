@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #fafaf8;
+  --color-panel: #ffffff;
+  --color-ink: #1a1a18;
+  --color-muted: #6b6b66;
+  --color-line: #e4e1da;
+  --color-coral: #c23b22;
+  --color-coral-deep: #9c2f1b;
+  --color-coral-soft: #fbe9e4;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+html {
+  background-color: var(--color-paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Subtle entrance for cards. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 400ms ease-out both;
+}
